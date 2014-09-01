@@ -1,0 +1,25 @@
+{
+  "name": "razrbit",
+  "repo": "luxstack/razrbit-sdk-node",
+  "description": "razrbit api browser sdk",
+  "version": "0.0.1",
+  "keywords": [
+    "http",
+    "ajax",
+    "request",
+    "agent"
+  ],
+  "scripts": [
+    "client.js",
+    "lib/wallet.js",
+    "lib/explorer.js",
+    "lib/network.js",
+    "lib/markets.js",
+    "lib/notifications.js"
+  ],
+  "main": "client.js",
+  "dependencies": {
+    "visionmedia/superagent": "*"
+  },
+  "license": "MIT"
+}
