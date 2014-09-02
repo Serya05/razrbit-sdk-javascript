@@ -1,6 +1,6 @@
 {
   "name": "razrbit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Javascript SDK for Razrbit service",
   "scripts": {
     "test": "mocha --no-timeouts"
@@ -14,7 +14,7 @@
     "api",
     "luxstack"
   ],
-  "author": "LUXSTACK <devops@luxstack.com>",
+  "author": "LUXSTACK <team@luxstack.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/LUXSTACK/razrbit-sdk-javascript/issues"
