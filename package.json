@@ -1,6 +1,6 @@
 {
   "name": "razrbit",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Javascript SDK for Razrbit service",
   "scripts": {
     "test": "mocha --no-timeouts"
