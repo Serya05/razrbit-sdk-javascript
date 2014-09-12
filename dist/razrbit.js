@@ -52,33 +52,6 @@ require.define = function (name, exports) {
     exports: exports
   };
 };
-require.register("component~reduce@1.0.1", function (exports, module) {
-
-/**
- * Reduce `arr` with `fn`.
- *
- * @param {Array} arr
- * @param {Function} fn
- * @param {Mixed} initial
- *
- * TODO: combatible error handling?
- */
-
-module.exports = function(arr, fn, initial){  
-  var idx = 0;
-  var len = arr.length;
-  var curr = arguments.length == 3
-    ? initial
-    : arr[idx++];
-
-  while (idx < len) {
-    curr = fn.call(null, curr, arr[idx], ++idx, arr);
-  }
-  
-  return curr;
-};
-});
-
 require.register("component~emitter@1.1.3", function (exports, module) {
 
 /**
@@ -245,6 +218,33 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
+});
+
+require.register("component~reduce@1.0.1", function (exports, module) {
+
+/**
+ * Reduce `arr` with `fn`.
+ *
+ * @param {Array} arr
+ * @param {Function} fn
+ * @param {Mixed} initial
+ *
+ * TODO: combatible error handling?
+ */
+
+module.exports = function(arr, fn, initial){  
+  var idx = 0;
+  var len = arr.length;
+  var curr = arguments.length == 3
+    ? initial
+    : arr[idx++];
+
+  while (idx < len) {
+    curr = fn.call(null, curr, arr[idx], ++idx, arr);
+  }
+  
+  return curr;
+};
 });
 
 require.register("visionmedia~superagent@0.18.2", function (exports, module) {
@@ -1619,6 +1619,19 @@ Markets.prototype.historicalPrice = function(currencyCode, date, cb) {
         });
 };
 
+/**
+ * Returns the price for today
+ * @param {string} currencyCode
+ * @param {function(err)} cb
+ * @returns {undefined}
+ */
+Markets.prototype.dayPriceHistory = function(currencyCode, cb) {
+    this.razrbit.request("/api/v1/markets/dayPriceHistory",
+        { currencyCode: currencyCode }, function(err, body) {
+            if (err) return cb(err);
+            cb(null, body.dayPriceHistory);
+        });
+};
 });
 
 require.register("razrbit/lib/notifications.js", function (exports, module) {
