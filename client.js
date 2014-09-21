@@ -10,7 +10,7 @@ var Notifications = require("./lib/notifications");
 
 module.exports = Razrbit;
 
-var ENDPOINT = "https://api.razrbit.com";
+var ENDPOINT = "https://api.luxstack.com";
 
 var WEBSOCKET_BLOCKS_PORT = 8082;
 var WEBSOCKET_TXS_PORT = 8081;
@@ -82,7 +82,7 @@ Razrbit.prototype = {
             });
     },
     websocket: function(port, cb) {
-        var socket = new WsWrapper("ws://api.razrbit.com");
+        var socket = new WsWrapper("ws://api.luxstack.com");
         socket.on('open', function() {
             cb(socket);
         });

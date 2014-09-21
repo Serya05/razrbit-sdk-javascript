@@ -1,4 +1,4 @@
-<img src="http://cdn.luxstack.com/assets/razrbit-github-banner-dark-beta.png" style="width:100%"/>
+<img src="http://cdn.luxstack.com/assets/luxstack-logo-dark.png" style="width:100%"/>
 
 Official SDKs: 
 [Android](https://github.com/LUXSTACK/razrbit-sdk-android) | 
