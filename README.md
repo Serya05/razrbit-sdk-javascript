@@ -19,8 +19,7 @@ Javascript |
 
 ### Browser
 
-1) Include the `dist/razrbit.min.js` script in your
-page.
+1) Include the `dist/razrbit.min.js` script in your page
 
 2) Set your website's domain in the settings page of the dashboard
 
