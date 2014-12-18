@@ -1,6 +1,6 @@
 {
   "name": "razrbit",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Javascript SDK for LUXSTACK's Razrbit service",
   "scripts": {
     "test": "mocha --no-timeouts"
